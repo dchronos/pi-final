@@ -50,11 +50,7 @@ public class InteractiveObjects : MonoBehaviour {
 			
 			Fada.GetComponent<FairyScript> ().endMarker.transform.position = gameObject.transform.position;
 			Fada.GetComponent<FairyScript> ().speed = 20;
-//			Debug.Log ("FADA: " + Fada.transform.position.x);
-//			Debug.Log ("GameObject: " + gameObject.transform.position.x);
-//			Debug.Log ("transformBackup: " + gameObject.transform.position.x);
 			if (Fada.transform.position.x >= gameObject.transform.position.x) {
-//				Debug.Log ("XXXXXXX");
 				slotPosition = Camera.main.ScreenToWorldPoint (slot01.transform.position);
 
 				transform.position = Vector3.Lerp (transform.position, slotPosition, Time.deltaTime * 4.0f);
@@ -65,7 +61,6 @@ public class InteractiveObjects : MonoBehaviour {
 				if (Vector3.Distance (transform.position, slotPosition) <= 1f) {
 				
 					slot01.sprite = GetComponent<SpriteRenderer> ().sprite;
-					//Fada.GetComponent<FairyScript> ().endMarker.transform.position = backupGameObject.transform.position;
 					Fada.GetComponent<FairyScript> ().restartMarkers();
 					Fada.GetComponent<FairyScript> ().changeMarkers = true;
 					Destroy (gameObject);

@@ -7,6 +7,7 @@ TagManager:
   - HUDPotion
   - ItemWood
   - ItemWindow
+  - wall
   layers:
   - Default
   - TransparentFX
